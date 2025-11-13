@@ -3,7 +3,6 @@ pipeline {
 
     tools {
         maven 'Maven3'  // Must match Maven tool name in Jenkins
-        hudson.plugins.sonar.SonarRunnerInstallation 'SonarScanner' // Must match SonarScanner tool name in Jenkins
     }
 
     environment {
