@@ -2,12 +2,12 @@ pipeline {
     agent any
     environment {
         SONARQUBE_SERVER = 'SonarQubeServer'  // The name of the SonarQube server configured in Jenkins
-        SONAR_TOKEN = 'YOUR TOKEN’ // Store the token securely
+        SONAR_TOKEN = 'sqa_d9191259bdb43236dee6e9185337370af28c6ec8’
     }
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'master', url: 'https://github.com/ADirin/sep2_week5_inclass_s2.git'
+                git branch: 'master', url: 'https://github.com/ADirin/Week4_Inclass_Assignment_SonarQube_Jenkins.git'
             }
         }
         stage('Build') {
