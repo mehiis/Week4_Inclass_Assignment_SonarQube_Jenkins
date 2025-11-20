@@ -2,18 +2,18 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven3'  // Maven tool name in Jenkins
+        maven 'MAVEN_HOME'  // Maven tool name in Jenkins
     }
 
     environment {
         SONARQUBE_SERVER = 'SonarQubeServer'  // SonarQube server name in Jenkins config
-        SONAR_TOKEN = 'sqa_d9191259bdb43236dee6e9185337370af28c6ec8'
+        SONAR_TOKEN = 'sqa_187961bdc19ab9ff491b7e5efba5db6b42c83152'
     }
 
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'master', url: 'https://github.com/ADirin/Week4_Inclass_Assignment_SonarQube_Jenkins.git'
+                git branch: 'master', url: 'https://github.com/mehiis/Week4_Inclass_Assignment_SonarQube_Jenkins'
             }
         }
 
